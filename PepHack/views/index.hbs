@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+<style>
+*{
+    background-color: white;
+    margin:0px;
+    padding:0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.outer {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header {
+    display: flex;
+    height: 13vh;
+    width: 100%;
+    background-color:#2f2ea9;
+    justify-content: center;
+    align-items: center;
+    color:#cce8f0;
+}
+a{
+    text-decoration:none;
+}
+h1{
+ background-color:#2f2ea9;   
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    
+    font-size: 18px;
+    color: #cce8f0;
+}
+
+.upperleft {
+    background-color: #2f2ea9;
+    /* border: none; */
+    border-radius: 4px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upperright {
+    background-color: #2f2ea9;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    display: flex;
+    height: 35px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contentleft {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #cce8f0;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+.contentnright {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid lightgrey;
+    border: 1px solid lightgrey;
+
+</style>
+</head>
+<body>
+    <div class="header">
+     <h1>HackerEarth Jobs</h1>
+    </div>
+    <div class="outer">
+      <div class="left">
+        <img src="https://en.pimg.jp/066/567/636/1/66567636.jpg">
+    </div>
+    <div class="right">
+       <div class="upper">
+           <div class="upperleft">
+               Companies
+           </div>
+           <div class="upperright">
+               Apply Link
+           </div>
+           </div>
+        {{#each data}}
+        <div class="content">
+            <div class="contentleft">{{this.name}}</div>
+            <div class="contentnright"><a href={{this.link}} target="_blank">Link</a></div>
+        </div>
+        {{/each}}
+    
+    </div>
+    </div>
+</body>
+</html>

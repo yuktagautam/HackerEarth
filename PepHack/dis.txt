@@ -1,0 +1,9 @@
+Autoamtion using puppeteer
+
+1.Fetch current job openings from HackerEarth Platform
+
+2.Create a Excel File that consist of company name along with the apply links
+
+3.Send Email 
+
+4.Display the data on port no-3000
